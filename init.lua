@@ -65,7 +65,8 @@ materials_formspec = materials_formspec.."list[current_player;main;3,7;8,4;]"
 
 minetest.register_node("materials:generator", {
 	description = "Material Generator",
-	tiles = { "" },
+	tiles = {"materials_generator_top.png", "materials_generator_top.png", "materials_generator_side.png",
+		"materials_generator_side.png", "materials_generator_side.png", "materials_generator_front.png"},
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
 	sounds = default.node_sound_stone_defaults(),
