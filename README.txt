@@ -24,3 +24,11 @@ technic_worldgen by RealBadAngel (WTFPL)
 concrete by RealBadAngel (WTFPL)
 	technic_concrete_block.png
 	technic_blast_resistant_concrete_block.png
+
+moreores by Calinou (GNU GPL v3)
+	moreores_bronze_block.png
+	moreores_copper_block.png
+	moreores_gold_block.png
+	moreores_mithril_block.png
+	moreores_silver_block.png
+	moreores_tin_block.png
