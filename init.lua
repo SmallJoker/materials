@@ -45,7 +45,7 @@ for supported_mod in mod_list:lines() do
 end
 
 -- Make formspec
-local form_x, form_y = 0, 3
+local form_x, form_y = 0, 2
 for i, v in ipairs(materials_nodes) do
 	materials_formspec = materials_formspec..
 			"item_image_button["..form_x..","..form_y..";1,1;"..v..";mag$"..i..";]"
@@ -114,14 +114,14 @@ minetest.register_node("materials:generator", {
 		local player_name = clicker:get_player_name()
 		local name = "nodemeta:"..pos.x..","..pos.y..","..pos.z
 		local formspec = ("size[14,11]"..
-				"label[2,0;Materials generator]"..
-				"label[0,0.5;Stone:]"..
-				"list["..name..";src;0,1;2,2;]"..
-				"label[3,0.5;Mese fragments:]"..
-				"list["..name..";src2;3,1;2,1;]"..
-				"label[6,0.5;Output:]"..
-				"list["..name..";dst;6,1;2,2;]"..
-				"label[8.5,1.5;Press a button to convert\n33 stone to 6 new materials.]")
+				"label[9.5,0;Materials generator]"..
+				"label[2,1.4;<- Stone]"..
+				"list["..name..";src;0,0;2,2;]"..
+				"label[3,0.8;Mese fragments]"..
+				"list["..name..";src2;3,0;2,1;]"..
+				"label[5,1.4;Output ->]"..
+				"list["..name..";dst;6,0;2,2;]"..
+				"label[9.4,0.6;Press a button to convert\n33 stone to 6 new materials.]")
 		formspec = formspec..materials_formspec
 		materials_opened_formspecs[player_name] = pos
 		minetest.show_formspec(player_name, "materials:generator_formspec", formspec)
